@@ -34,7 +34,7 @@ public class CompleteScheduleConfig implements SchedulingConfigurer {
     public void configureTasks(ScheduledTaskRegistrar taskRegistrar) {
         taskRegistrar.addTriggerTask(
                 //1.添加任务内容(Runnable)
-                () -> System.err.println("执行定时任务2: " + SimpleDateFormat.getDateTimeInstance().format(System.currentTimeMillis())),
+                () -> System.err.println("执行定时任务: " + SimpleDateFormat.getDateTimeInstance().format(System.currentTimeMillis())),
                 //2.设置执行周期(Trigger)
                 triggerContext -> {
                     //2.1 从数据库获取执行周期
